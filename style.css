@@ -1,6 +1,14 @@
 /* Reset Básico */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
 
+/* Garante que o link não estrague o visual do card */
+.card-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit;        /* Mantém as cores originais dos textos */
+    display: block;        /* Faz o link ocupar o bloco todo */
+    height: 100%;          /* Garante a altura total */
+}
+
 /* VARIÁVEIS DE CORES */
 :root {
     --ml-blue: #2D3277;
