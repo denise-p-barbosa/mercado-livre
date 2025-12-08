@@ -1,0 +1,159 @@
+/* Reset Básico */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+
+/* VARIÁVEIS DE CORES (A Mágica acontece aqui) */
+:root {
+    /* Cores Oficiais do Mercado Livre */
+    --ml-blue: #2D3277;   /* Azul Marinho */
+    --ml-yellow: #FFE600; /* Amarelo Vibrante */
+    
+    /* Cores de apoio */
+    --white: #ffffff;
+    --gray-bg: #ebebeb;   /* Fundo cinza claro padrão de e-commerce */
+    --text-dark: #333333;
+}
+
+body { background-color: var(--gray-bg); color: var(--text-dark); }
+
+/* 1. Header (Cabeçalho) */
+header {
+    background-color: var(--ml-blue); /* Fundo Azul */
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.5rem; 
+    letter-spacing: 1px; 
+    border: 1px solid var(--ml-yellow); /* Borda Amarela para destaque */
+    color: var(--ml-yellow);
+    padding: 5px 10px; 
+}
+nav a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; font-weight: bold; }
+nav a:hover { color: var(--ml-yellow); transition: 0.3s; }
+
+/* 2. Hero Section */
+.hero {
+    /* Imagem de fundo */
+    background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop'); 
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+.hero-content { 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 40px; 
+    max-width: 450px; 
+    border-left: 5px solid var(--ml-yellow); /* Detalhe amarelo na borda */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 10px; color: var(--ml-blue); }
+.hero h2 { font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase; color: #555; }
+
+/* BOTÃO PRINCIPAL (Estilo ML) */
+.btn-hero {
+    display: inline-block;
+    background-color: var(--ml-blue); /* Azul */
+    color: var(--white); /* Texto Branco */
+    padding: 15px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px; /* Cantos levemente arredondados */
+    transition: 0.3s;
+}
+.btn-hero:hover { 
+    background-color: var(--ml-yellow); /* Vira Amarelo */
+    color: var(--ml-blue); /* Texto vira Azul */
+}
+
+/* 3. Features (Faixa Amarela) */
+.features {
+    background-color: var(--ml-yellow); /* Fundo Amarelo */
+    color: var(--ml-blue); /* Texto Azul (Para dar leitura) */
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+.feature-item { display: flex; align-items: center; gap: 15px; max-width: 300px; }
+.feature-item span { font-size: 2rem; }
+.feature-item h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; }
+.feature-item p { font-size: 0.8rem; opacity: 0.9; font-weight: 500;}
+
+/* 4. Brands */
+.brands { text-align: center; padding: 40px 20px; background: white; }
+.brands h3 { font-family: 'Playfair Display', serif; margin-bottom: 20px; letter-spacing: 2px; color: var(--ml-blue); }
+.brand-logos span { margin: 0 20px; font-weight: bold; color: #ccc; font-size: 1.5rem; }
+
+/* 5. Top Picks (Fundo Azul) */
+.top-picks { 
+    padding: 50px 10%; 
+    background-color: var(--ml-blue); /* Fundo Azul ML */
+    color: white; 
+}
+.section-title { text-align: center; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 20px; }
+.section-title span { font-family: 'Playfair Display', serif; letter-spacing: 2px; font-size: 1.2rem; text-transform: uppercase; color: var(--ml-yellow); }
+.section-title hr { width: 100px; border: 0.5px solid rgba(255,255,255,0.3); }
+
+.picks-container { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+
+/* Card do Produto */
+.pick-card { 
+    background: white; 
+    color: black; 
+    width: 400px; 
+    display: flex; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+    border-radius: 6px;
+    overflow: hidden;
+}
+.img-placeholder { width: 40%; display: flex; align-items: center; justify-content: center; font-weight: bold; text-align: center; background-color: #eee;}
+.pick-info { width: 60%; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
+.pick-info h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; color: var(--ml-blue); font-weight: bold; }
+.stars { color: var(--ml-yellow); margin-bottom: 10px; font-size: 1.2rem; } /* Estrelas Amarelas */
+.pick-info p { font-size: 0.85rem; line-height: 1.4; margin-bottom: 15px; font-style: italic; color: #666; }
+.author { font-size: 0.7rem; font-weight: bold; margin-bottom: 15px; color: #999; text-transform: uppercase; }
+
+/* Botão do Card (O botão de Comprar) */
+.btn-dark {
+    background-color: var(--ml-blue); /* Azul */
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.btn-dark:hover { 
+    background-color: var(--ml-yellow); /* Amarelo no Hover */
+    color: var(--ml-blue); /* Texto Azul */
+}
+
+/* 6. Footer */
+footer { background-color: #222; color: white; text-align: center; padding: 40px; margin-top: auto; border-top: 5px solid var(--ml-yellow); }
+.socials { margin: 15px 0; }
+.socials a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
+.copyright { font-size: 0.7rem; opacity: 0.5; }
+
+/* Responsivo para Celular */
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 15px; text-align: center; }
+    .hero { justify-content: center; padding: 0; background-position: center; }
+    .hero-content { text-align: center; margin: 20px; width: 90%; }
+    .pick-card { flex-direction: column; width: 100%; }
+    .img-placeholder { width: 100%; height: 200px; }
+    .pick-info { width: 100%; }
+}
