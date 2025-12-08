@@ -64,12 +64,8 @@
         </div>
         
         <div class="picks-container">
-            
             <div class="pick-card">
-                <img src="https://images.unsplash.com/photo-1594938298603-c8148c472f96?q=80&w=1000&auto=format&fit=crop" 
-                     alt="Roupa Masculina" 
-                     class="card-img">
-                
+                <div class="img-placeholder" style="background-color: #ddd;">FOTO ROUPA</div>
                 <div class="pick-info">
                     <h4>ESTILO URBANO</h4>
                     <div class="stars">★★★★★</div>
@@ -80,10 +76,7 @@
             </div>
 
             <div class="pick-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop" 
-                     alt="Fone de Ouvido" 
-                     class="card-img">
-
+                <div class="img-placeholder" style="background-color: #333; color: white;">FOTO ELETRÔNICO</div>
                 <div class="pick-info">
                     <h4>TECH PREMIUM</h4>
                     <div class="stars">★★★★★</div>
@@ -92,7 +85,100 @@
                     <a href="SEU_LINK_ELETRONICOS_AQUI" class="btn-dark" target="_blank">VER GADGETS</a>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section class="carousel-section">
+        <h2>Inspirado no último visto</h2>
+        
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+            
+            <div class="carousel-track-container">
+                <ul class="carousel-track" id="carouselTrack">
+                    
+                    <li class="product-card">
+                        <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=300&auto=format&fit=crop" alt="Camiseta Polo">
+                        <div class="product-info">
+                            <h3>Camisa Masculina Polo Piquet Alta Qualidade</h3>
+                            <div class="price">
+                                <span class="old-price">R$ 50,99</span>
+                                <span class="new-price">R$ 38,17</span>
+                                <span class="discount">25% OFF</span>
+                            </div>
+                            <div class="shipping">
+                                <span>Chegará quinta-feira</span>
+                                <span class="full-icon">⚡ FULL</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="product-card">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=300&auto=format&fit=crop" alt="Camiseta Básica">
+                        <div class="product-info">
+                            <h3>Camiseta Algodão Básica Lisa Slim Fit</h3>
+                            <div class="price">
+                                <span class="old-price">R$ 49,90</span>
+                                <span class="new-price">R$ 29,90</span>
+                                <span class="discount">40% OFF</span>
+                            </div>
+                            <div class="shipping">
+                                <span>Chegará amanhã</span>
+                                <span class="full-icon">⚡ FULL</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="product-card">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=300&auto=format&fit=crop" alt="Camiseta Preta">
+                        <div class="product-info">
+                            <h3>Camiseta Básica Masculina Preta 100% Algodão</h3>
+                            <div class="price">
+                                <span class="old-price">R$ 69,90</span>
+                                <span class="new-price">R$ 34,90</span>
+                                <span class="discount">50% OFF</span>
+                            </div>
+                            <div class="shipping">
+                                <span>Chegará quinta-feira</span>
+                                <span class="full-icon">⚡ FULL</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="product-card">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=300&auto=format&fit=crop" alt="Camiseta Slim">
+                        <div class="product-info">
+                            <h3>Camiseta Slim Fit Gola Redonda Várias Cores</h3>
+                            <div class="price">
+                                <span class="new-price">R$ 33,37</span>
+                                <span class="discount">33% OFF</span>
+                            </div>
+                            <div class="shipping">
+                                <span>Envio Rápido</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="product-card">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=300&auto=format&fit=crop" alt="Camiseta Polo Zíper">
+                        <div class="product-info">
+                            <h3>Camiseta Polo Manga Curta Com Zíper Masculina</h3>
+                            <div class="price">
+                                <span class="old-price">R$ 75,99</span>
+                                <span class="new-price">R$ 37,99</span>
+                                <span class="discount">50% OFF</span>
+                            </div>
+                            <div class="shipping">
+                                <span>Chegará sexta-feira</span>
+                                <span class="full-icon">⚡ FULL</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    </ul>
+            </div>
+            
+            <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
         </div>
     </section>
 
@@ -105,6 +191,23 @@
             <p class="copyright">© 2025 Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        // Define o quanto o carrossel anda a cada clique (largura do card + espaço)
+        const scrollAmount = 240; 
+
+        nextBtn.addEventListener('click', () => {
+            track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
 </html>
