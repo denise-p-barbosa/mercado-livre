@@ -527,3 +527,20 @@ footer { background-color: #222; color: white; text-align: center; padding: 40px
         flex-direction: column !important; /* No celular volta ao normal (um em cima do outro) */
     }
 }
+
+/* --- CORREÇÃO DE TEXTO COLADO NAS BORDAS (CELULAR) --- */
+@media (max-width: 768px) {
+    .promo-text h2 {
+        font-size: 1.8rem;   /* Diminui a letra (antes era 2.5rem) */
+        padding: 0 15px;     /* Adiciona um "colchão" de ar nas laterais */
+        line-height: 1.2;    /* Ajusta a altura da linha */
+        width: 100%;         /* Garante que o texto respeite a caixa */
+        word-wrap: break-word; /* Se mesmo assim for grande, quebra a linha */
+    }
+    
+    /* Ajuste extra para o container não vazar a tela */
+    .promo-container {
+        width: 95%;      /* Deixa um espacinho nas bordas da tela */
+        margin: 0 auto;  /* Centraliza */
+    }
+}
