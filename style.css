@@ -1,6 +1,8 @@
 /* Reset Básico */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
 
+
+
 /* Garante que o link não estrague o visual do card */
 .card-link {
     text-decoration: none; /* Remove o sublinhado */
@@ -287,4 +289,20 @@ footer { background-color: #222; color: white; text-align: center; padding: 40px
     .carousel-btn { display: none; /* Esconde as setas no celular (usa o dedo) */ }
     .carousel-track { gap: 15px; }
     .product-card { min-width: 180px; } /* Cards menores no celular */
+}
+
+/* Adicione no final do style.css */
+
+.card-img-side {
+    width: 40%;        /* Ocupa exatamente a largura que era do quadrado cinza */
+    height: 100%;      /* Ocupa toda a altura do card */
+    object-fit: cover; /* CORTA a imagem para caber no espaço sem distorcer */
+    display: block;    /* Remove espaços fantasmas */
+}
+
+/* Garantia para o card não esticar */
+.pick-card {
+    height: 250px;     /* Mantém a altura fixa igual estava antes */
+    display: flex;     /* Garante que fiquem lado a lado */
+    overflow: hidden;  /* Corta qualquer coisa que tente sair da caixa */
 }
