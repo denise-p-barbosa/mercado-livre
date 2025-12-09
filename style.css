@@ -503,3 +503,27 @@ footer { background-color: #222; color: white; text-align: center; padding: 40px
         padding: 20px !important;
     }
 }
+
+/* --- ESTILO EXTRA PARA O BANNER DE TECH (PRETO) --- */
+
+.tech-style {
+    background-color: #111 !important; /* Muda para Preto Premium */
+    flex-direction: row-reverse; /* INVERTE: Texto na Esquerda, Foto na Direita */
+}
+
+/* Ajuste do botão para combinar com fundo preto */
+.tech-style .promo-btn {
+    background-color: white;
+    color: black;
+}
+.tech-style .promo-btn:hover {
+    background-color: var(--ml-blue);
+    color: white;
+}
+
+/* Ajuste Obrigatório para Celular */
+@media (max-width: 768px) {
+    .tech-style {
+        flex-direction: column !important; /* No celular volta ao normal (um em cima do outro) */
+    }
+}
